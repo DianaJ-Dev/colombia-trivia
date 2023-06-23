@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" href="https://glitch.com/favicon.ico" />
+    <title>Viaja por Colombia</title>
+
+    <link rel="stylesheet" href="style.css" />
+
+    <script src="script.js" defer></script>
+   
+  </head>
+  <body>
+    <!--Inicio de pantalla-->
+    <div id="principal">
+    <input type="text" id="nombre" placeholder="Ingresa tu nombre">
+    <button onclick="saludar()">Saludar</button>
+    <p id="resultado"></p>
+
+    <div class="juego">
+      <div class="content" role="main">
+        <h1 class="title">Viaja por Colombia</h1>
+        <img
+          src="https://cdn.glitch.global/2374b7ae-f2ce-4f30-89a1-90a3459c93f0/colombia-turismo.jpg"
+          width="500px"
+          height="500px"
+        />
+        <div class="instructions">
+          <h2>Trivia Colombia</h2>
+          <strong>Vamos a ver que tanto sabes sobre nuestro hermoso país</strong>
+          <button type="button" onclick="irPregunta1()">Jugar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+        <!--Pantalla pregunta 1-->
+      <div class="juego" id="pantalla-pregunta1" style="display : none;">
+        <div class="content" role="main">
+          <h1 class="title">Pregunta 1 </h1>
+          <img
+            src="https://cdn.glitch.global/2374b7ae-f2ce-4f30-89a1-90a3459c93f0/images.jpg?v=1687324233970"/>
+          
+            <div class="instructions">
+            <h2>¿En que departamento de Colombia queda este mirador?</h2>
+            <p>Selecciona la opción correcta:</p>
+            <input type="radio" id="opcion1" name="opciones1" value="opcion_incorrecta1">
+            <label for="opcion1">Huila </label><br>
+            <input type="radio" id="opcion2" name="opciones1" value="opcion_incorrecta1">
+            <label for="opcion2">Cundinamarca </label><br>
+            <input type="radio" id="opcion3" name="opciones1" value="opcion_correcta">
+            <label for="opcion3">Antioquia </label><br>
+            <button type="button" onclick="verificarRespuesta('opciones1')">Verificar</button>
+            <p id="resultado"></p>
+            <button type="button" onclick="irPregunta2()">Siguiente</button>
+            </div>
+           </div> 
+  
+      </div>
+      <!--Pantalla pregunta 2-->
+      <div class="juego" id="pantalla-pregunta2" style="display : none;">
+        <div class="content" role="main">
+          <h1 class="title">Pregunta 2 </h1>
+          <img 
+            src="https://cdn.glitch.global/2374b7ae-f2ce-4f30-89a1-90a3459c93f0/bandera.jpeg?v=1687382885910"/>
+          <div class="instructions">
+            <p>Selecciona la opción correcta:</p>
+            <input type="radio" id="opcion1" name="opciones2" value="opcion_incorrecta1">
+            <label for="opcion1">El amarillo las regiones de Colombia, el azul los ríos y el rojo la sangre derramada por los próceres de la independencia. </label><br>
+            <input type="radio" id="opcion2" name="opciones2" value="opcion_incorrecta1">
+            <label for="opcion2">El amarillo las riquezas naturales; el azul los  ríos y el rojo la sangre derramada por los próceres de la Independencia. </label><br>
+            <input type="radio" id="opcion3" name="opciones2" value="opcion_correcta">
+            <label for="opcion3">El amarillo las riquezas naturales; el azul los mares y el rojo la sangre derramada por los próceres de la independencia. </label><br>
+            <button type="button" onclick="verificarRespuesta('opciones2')">Verificar</button>
+            <p id="resultado"></p>
+            <button type="button" onclick="irPregunta3()">Siguiente</button>
+          </div>
+        </div>
+      </div>
+      <!--Pantalla pregunta 3-->
+      <div class="juego" id="pantalla-pregunta3" style="display : none;">
+        <div class="content" role="main">
+          <h1 class="title">Pregunta 3 </h1>
+          <img
+            src="https://cdn.glitch.global/2374b7ae-f2ce-4f30-89a1-90a3459c93f0/maxresdefault.jpg?v=1687383643328"width="400px"height="200px"/>
+          <div class="instructions">
+            <h2>¿En que departamento de Colombia queda este mirador?</h2>
+            <p>Selecciona la opción correcta:</p>
+            <input type="radio" id="opcion1" name="opciones3" value="opcion_incorrecta1">
+            <label for="opcion1">Cali </label><br>
+            <input type="radio" id="opcion2" name="opciones3" value="opcion_correcta">
+            <label for="opcion2">Putumayo </label><br>
+            <input type="radio" id="opcion3" name="opciones3" value="opcion_incorrecta1">
+            <label for="opcion3">Barranquilla</label><br>
+            <button type="button" onclick="verificarRespuesta('opciones3')">Verificar</button>
+            <button type="button" onclick="verResultados()">Siguiente</button>
+            
+        </div> 
+        
+      </div>
+
+        
+    </div>
+    <!--fin de preguntas-->
+    <div id="pantalla-resultados" style="display : none;">
+      <div id="result" style="display : none;">
+        <h2>Resultados</h2>
+        <p id="resultados"></p>
+      </div>
+      <button type="button" onclick="jugarDeNuevo()">Volver a jugar</button>
+
+    </div>
+    <footer class="footer">
+      <p>Laboratoria 2023 : Diana Matamoros , Diana Malaver</p>
+    </footer>
+    
+  </body>
+</html>
